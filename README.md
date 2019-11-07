@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Code test
 
-## Available Scripts
+This project is a basket app for the Arcadia code test, written in React, initial codebase kick off via Create React App.
 
-In the project directory, you can run:
+## Getting started
 
-### `npm start`
+Within the repo, via the command line install the project dependencies via NPM or (Yarn)...
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+$ npm i
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Running the project locally
 
-### `npm test`
+To start and run this project use the standard NPM command:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+$ npm start
+```
 
-### `npm run build`
+This will bring the app up on the following URL: [http://localhost:3000](http://localhost:3000).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# ACME Supermarket Original Readme
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Create a solution for the ACME Supermarket problem.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Description of the problem
 
-### `npm run eject`
+ACME's quest for global domination has prompted us to open a supermarket – we sell only three products:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    Product code        Name            Price
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    FR1                 Fruit tea       £ 3.11
+    SR1                 Strawberries    £ 5.00
+    CF1                 Coffee          £11.23
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Our CEO is a big fan of buy-one-get-one-free offers and of fruit tea. He wants us to add a rule to do this.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The COO, though, likes low prices and wants people buying strawberries to get a price discount for bulk purchases. If you buy 3 or more strawberries, the price should drop to £4.50.
+Our check-out can scan items in any order, and because the CEO and COO change their minds often, it needs to be flexible regarding our pricing rules.
 
-## Learn More
+The interface to our basket looks like this (shown in JavaScript):
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    var basket = new Basket(pricingRules)
+    basket.add(item)
+    basket.add(item)
+    var price = basket.total()
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Implement a basket system that fulfills these requirements in JavaScript.
 
-### Code Splitting
+Test Data:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+    Basket: FR1, SR1, FR1, CF1
+    Total price expected: £19.34
 
-### Analyzing the Bundle Size
+    Basket: FR1, FR1
+    Total price expected: £3.11
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+    Basket: SR1, SR1, FR1, SR1
+    Total price expected: £16.61

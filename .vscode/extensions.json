@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "visualstudioexptteam.vscodeintellicode",
+    "esbenp.prettier-vscode",
+    "aaron-bond.better-comments",
+    "idbartosz.darkpp-italic",
+    "eamodio.gitlens"
+  ]
+}
+
