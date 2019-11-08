@@ -1,13 +1,15 @@
 [
   {
-    "name": "CEO Loves Fruit tea",
+    "id": "pr1",
+    "name": "CEO Loves Fruit tea BOGOF",
     "type": "BOGOF",
-    "appliesTo": ["FR1"]
+    "appliesTo": "FR1"
   },
   {
+    "id": "pr2",
     "name": "Strawberry bulk discount",
     "type": "PRICE_DISCOUNT",
-    "appliesTo": ["SR1"],
+    "appliesTo": "SR1",
     "minimumProducts": 3,
     "discountUnitTo": 4.5
   }

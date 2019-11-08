@@ -12,9 +12,7 @@ const reducer = (state = initialState, action) => {
       };
     case BASKET_REMOVE_ITEM:
       return {
-        items: state.items.filter((product, i) =>
-          i !== action.index ? product : null
-        ),
+        items: state.items.filter((product, i) => i !== action.index),
       };
     case BASKET_EMPTY:
       return { ...initialState };

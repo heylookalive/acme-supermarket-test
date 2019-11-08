@@ -4,7 +4,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import reducer from './redux/reducer';
-import { productsLoad, pricingRulesLoad } from './redux/actions';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -17,10 +16,6 @@ const composeEnhancers =
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));
 const store = createStore(reducer, enhancer);
-
-// For now load products.
-store.dispatch(productsLoad());
-store.dispatch(pricingRulesLoad());
 
 ReactDOM.render(
   <Provider store={store}>

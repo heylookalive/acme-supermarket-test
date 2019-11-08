@@ -1,0 +1,21 @@
+nav {
+  ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    margin: 0 1rem;
+    min-height: 30px;
+    line-height: 30px;
+  }
+
+  a {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      border-color: black;
+    }
+  }
+}
