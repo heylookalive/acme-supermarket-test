@@ -20,6 +20,14 @@ $ npm start
 
 This will bring the app up on the following URL: [http://localhost:3000](http://localhost:3000).
 
+## Running the unit tests
+
+This project has unit tests against it, you can run them using the standard command.
+
+```
+$ npm test
+```
+
 # ACME Supermarket Original Readme
 
 Create a solution for the ACME Supermarket problem.
